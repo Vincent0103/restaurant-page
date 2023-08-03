@@ -1,0 +1,1 @@
+(()=>{var __webpack_modules__={83:()=>{eval("\n\n//# sourceURL=webpack://restaurant_page_package/./src/menu.js?")}},__webpack_exports__={};__webpack_modules__[83]()})();

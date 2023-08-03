@@ -1,6 +1,8 @@
-import addContent from "./pageload-module";
+import addContent from "./pageload";
 
 window.addEventListener("DOMContentLoaded", () => {
-  document.body.appendChild(addContent());
-  alert("Setup done!");
+  const elements = addContent();
+  elements.forEach(element => {
+    document.body.appendChild(element);
+  })
 })
