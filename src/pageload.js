@@ -27,6 +27,7 @@ export default function addContent() {
             currentContent = contactContent();
           })
         }
+        window.scrollTo(0, 0);
       }
     });
   });
