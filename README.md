@@ -7,3 +7,4 @@
 # TO-DO:
 
 - Optimize website with lazy loading, chunk stuff, etc...
+- Add linear-gradient to absolute black to bgimage of menu tab

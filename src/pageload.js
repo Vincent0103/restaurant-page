@@ -1,12 +1,12 @@
 import headerNavbar from "./staticElements";
 import homeContent from "./home";
-
-import "./components/style.css";
+import menuContent from "./menu";
+import "./components/home.css";
 
 export default function addContent() {
   const content = document.querySelector("#content");
   const headerNavbarElement = headerNavbar();
-  let homeContentElement = homeContent();
+  let currentContent = menuContent();
 
   // event listener for when the content's data-index changes
   let observer = new MutationObserver(function(mutations) {
@@ -14,9 +14,10 @@ export default function addContent() {
       if (mutation.type === "attributes") {
         if (mutation.target.getAttribute("data-index") == 1) {
           content.innerHTML = "";
-          homeContentElement = homeContent();
+          currentContent = homeContent();
         } else if (mutation.target.getAttribute("data-index") == 2) {
           content.innerHTML = "";
+          currentContent = menuContent();
         } else {
           content.innerHTML = "";
         }
@@ -28,5 +29,5 @@ export default function addContent() {
     attributes: true //configure it to listen to attribute changes
   });
 
-  return [headerNavbarElement, homeContentElement];
+  return [headerNavbarElement, currentContent];
 }

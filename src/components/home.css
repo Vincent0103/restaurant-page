@@ -1,0 +1,328 @@
+* {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@font-face {
+  font-family: "Lostar";
+  src: url("./assets/Lostar.ttf") format("truetype");
+  font-style: normal;
+}
+
+/* button template */
+/* {
+  background-color: #a52422;
+  border-radius: 5px;
+  border: 1px solid #791918;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+} */
+
+::selection {
+  background-color: #d62828;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fcbf49;
+  height: max(30px, 10vh);
+  width: 100vw;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+  z-index: 3;
+}
+
+.header > ul {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header .navbar-links {
+  width: 100px;
+  height: 6vh;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.header .navbar-links:hover {
+  color: #d62828;
+  text-shadow: 0 0 5px rgba(214, 40, 40, .15);
+  font-size: 1.5rem;
+}
+
+body {
+  margin: 0;
+  background-color: #d62828;
+}
+
+#content {
+  padding-top: max(30px, 10vh);
+}
+
+.header h1 {
+  font-family: "Lostar";
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.content-bg {
+  background-color: #f77f00;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+  position: relative;
+}
+
+p {
+  margin: 0;
+}
+
+.slogan-container {
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+}
+
+.slogan-container > img {
+  opacity: .3;
+  width: 100%;
+}
+
+.slogan-container > h2 {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  font-size: 2.5rem;
+  left: calc(50% - 250px);
+  color: white;
+  text-shadow: 0 0 5px rgba(234, 226, 183, .4);
+  margin: 0;
+}
+
+.left-div-rotation {
+  position: absolute;
+  top: 90%;
+  left: -10%;
+  width: calc(100% + 500px);
+  height: 500px;
+  background-color: #f77f00;
+  box-shadow: 0 0 5px rgba(247, 127, 0, .5);
+  transform: rotate(5deg);
+  z-index: 0;
+}
+
+.desc-container {
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(#f77f00, #ffb623);
+  box-shadow: 0 0 5px rgba(247, 127, 0, .5);
+  margin-top: -20px;
+  padding: 0px 20px 20px 20px;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+
+}
+
+.desc-container > p {
+  font-weight: 500;
+  text-align: center;
+}
+
+.card-container {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #eae2b7;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.hours-container > h3 {
+  font-family: "Lostar";
+  margin: 0;
+  margin-left: 20px;
+}
+
+.hours-container > hr {
+  border: 1px solid black;
+}
+
+.hours-table-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  justify-items: center;
+  gap: 10px 10px;
+}
+
+.hours-table-container > div:first-child {
+  grid-column: 2;
+}
+
+.hours-table-container > .hoursTh {
+  font-weight: bold;
+  font-size: .8rem;
+}
+
+.hours-table-container > *:not(.hoursTh) {
+  font-size: .8rem;
+}
+
+.location-container > h3 {
+  margin-top: 0;
+  font-family: "Lostar";
+  margin-left: 20px;
+}
+
+.location-map-container > iframe {
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+}
+
+.location-map-container {
+  display: flex;
+  gap: 20px;
+}
+
+.location-container {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.menu-footer-container {
+  position: relative;
+  z-index: 0;
+  background-color: black;
+  margin-top: -10%;
+}
+
+.menu-footer-container > img {
+  width: 100%;
+  opacity: .3;
+}
+
+.menu-footer-link {
+  position: absolute;
+  text-align: center;
+  font-size: 2rem;
+  bottom: 20%;
+  left: calc(50% - 150px);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: 0 0 5px rgba(234, 226, 183, .4);
+  transition: all .2s;
+}
+
+.menu-footer-link:hover {
+  color: #d62828;
+  font-size: 2.1rem;
+  text-shadow: 0 0 5px rgba(214, 40, 40, .15);
+  transform: translateX(-2%);
+}
+
+.menu-content-bg {
+  padding: 40px 20px;
+  z-index: 0;
+  background-size: 200% 100%;
+  background-color: #3f2c19;
+  background-repeat: no-repeat;
+}
+
+
+.blend-content-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .9));
+  margin: -40px -20px;
+  padding: 40px 20px;
+}
+
+@media screen and (max-width: 1100px) {
+  .menu-content-bg {
+    background-size: 240% 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .menu-content-bg {
+    background-size: 330% 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .menu-content-bg {
+    background-image: linear-gradient(#e27500, #d62828) !important;
+  }
+
+  .blend-content-bg {
+    background-image: none;
+  }
+}
+
+.menu-headings {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 80px;
+  color: rgba(0, 0, 0, 1);
+  font-family: "Lostar";
+  letter-spacing: 3px;
+  text-shadow: -.5px 0 0 #f77f00,
+  -.5px -.5px 0 #f77f00,
+  0 -.5px 0 #f77f00,
+  .5px -.5px 0 #f77f00,
+  .5px 0 0 #f77f00,
+  .5px .5px 0 #f77f00,
+  0 .5px 0 #f77f00,
+  -.5px .5px 0 #f77f00;
+}
+
+.menu-headings:first-child {
+  margin-top: 0;
+}
+
+.menu-container-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.menu-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+  border: 2px solid #f77f00;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.menu-card-container > img {
+  width: 80%;
+}
+
+.menu-card-container > p:last-child {
+  margin-top: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.menu-container-cards:last-child {
+  grid-template-rows: 500px;
+}
+
+.menu-container-cards:last-child > * > img {
+  margin: -20px 0;
+}
+
+/* #content[data-index="2"] {
+  background-image:
+} */

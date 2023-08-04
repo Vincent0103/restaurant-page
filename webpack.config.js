@@ -1,14 +1,14 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "production",
   entry: {
-    contactModule: "./src/contact.js",
-    menuModule: "./src/menu.js",
-    homeModule: "./src/home.js",
-    staticElementsModule: "./src/staticElements.js",
-    pageloadModule: "./src/pageload.js",
+    contact: "./src/contact.js",
+    menu: "./src/menu.js",
+    home: "./src/home.js",
+    staticElements: "./src/staticElements.js",
+    pageload: "./src/pageload.js",
     index: "./src/index.js",
   },
   output: {
