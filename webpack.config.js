@@ -2,8 +2,9 @@ const path = require("path");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: {
+    footer: "./src/footer.js",
     contact: "./src/contact.js",
     menu: "./src/menu.js",
     home: "./src/home.js",
@@ -14,8 +15,8 @@ module.exports = {
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
+    clean: true,
   },
-  devtool: "eval",
   plugins: [new CompressionWebpackPlugin()],
   module: {
     rules: [

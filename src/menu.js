@@ -129,7 +129,7 @@ export default function addMenuContent() {
   friesNCheesePrice.textContent = "2.50$";
 
   const drinksHeading = document.createElement("h2");
-  drinksHeading.textContent = "DRINKS ?";
+  drinksHeading.textContent = "DRINKS";
   drinksHeading.classList.add("menu-headings");
 
   const drinksContainerCards = document.createElement("div");

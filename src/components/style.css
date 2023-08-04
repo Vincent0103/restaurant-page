@@ -360,3 +360,18 @@ p {
 .contact-content-bg > h2 + p {
   font-size: 1.5rem;
 }
+
+#footer {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 0;
+}
+
+#footer a:link {
+  color: black;
+}
+
+#footer a:visited {
+  color: black;
+}
