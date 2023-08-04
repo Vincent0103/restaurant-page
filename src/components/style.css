@@ -323,6 +323,40 @@ p {
   margin: -20px 0;
 }
 
-/* #content[data-index="2"] {
-  background-image:
-} */
+.contact-content-bg {
+  background-image: linear-gradient(#f77f00, #ffb623);
+  border-radius: 20px;
+  margin: 30px;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+  text-align: center;
+}
+
+.contact-content-bg > h1:first-child {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.contact-content-bg > h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-content-bg label {
+  font-weight: bold;
+}
+
+.first-nb-div,
+.second-nb-div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 5px 0;
+  font-size: 1.5rem;
+}
+
+.contact-content-bg > h2 + p {
+  font-size: 1.5rem;
+}

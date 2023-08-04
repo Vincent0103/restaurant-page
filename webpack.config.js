@@ -1,8 +1,8 @@
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CompressionWebpackPlugin = require("compression-webpack-plugin");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   entry: {
     contact: "./src/contact.js",
     menu: "./src/menu.js",
@@ -16,6 +16,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   devtool: "eval",
+  plugins: [new CompressionWebpackPlugin()],
   module: {
     rules: [
       {

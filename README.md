@@ -6,5 +6,6 @@
 
 # TO-DO:
 
-- Optimize website with lazy loading, chunk stuff, etc...
+- Optimize website with lazy loading, chunk stuff, etc... \[DONE\]
 - Add linear-gradient to absolute black to bgimage of menu tab
+- fix scroll when changing page

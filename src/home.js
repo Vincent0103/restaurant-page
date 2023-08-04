@@ -16,29 +16,21 @@ export default function addHomeContent() {
 
   const slogan = document.createElement("h2");
   slogan.innerHTML = "Unleash the Flavor Fiesta:<br> Tacos Galore!";
-  sloganContainer.appendChild(descBg);
-  sloganContainer.appendChild(slogan);
-  contentBg.appendChild(sloganContainer);
 
   const leftDivRotation = document.createElement("div");
   leftDivRotation.classList.add("left-div-rotation");
-  sloganContainer.appendChild(leftDivRotation);
 
   const descContainer = document.createElement("div");
   descContainer.classList.add("desc-container");
-  contentBg.appendChild(descContainer);
 
   const h2 = document.createElement("h2");
   h2.textContent = "Welcome to Sachet";
-  descContainer.appendChild(h2);
 
   const descP = document.createElement("p");
   descP.innerHTML = "- where authentic flavors meet modern innovation! Nestled in the heart of the bustling city, our tacos restaurant promises a delightful culinary journey that tantalizes your taste buds and leaves you craving for more.";
-  descContainer.appendChild(descP);
 
   const availableHoursAd = document.createElement("h2");
   availableHoursAd.textContent = "So when are we available?"
-  descContainer.appendChild(availableHoursAd);
 
   const hoursCardContainer = document.createElement("div");
   hoursCardContainer.classList.add("card-container");
@@ -46,17 +38,10 @@ export default function addHomeContent() {
 
   const hoursHeading = document.createElement("h3");
   hoursHeading.textContent = "Hours";
-  hoursCardContainer.appendChild(hoursHeading);
-  hoursCardContainer.appendChild(document.createElement("hr"));
 
   const hoursTableContainer = addHoursTable();
-
-  hoursCardContainer.appendChild(hoursTableContainer);
-  descContainer.appendChild(hoursCardContainer);
-
   const locationAd = document.createElement("h2");
   locationAd.textContent = "Oh, and our location?";
-  descContainer.appendChild(locationAd);
 
   const locationCardContainer = document.createElement("div");
   locationCardContainer.classList.add("card-container");
@@ -64,7 +49,6 @@ export default function addHomeContent() {
 
   const locationHeading = document.createElement("h3");
   locationHeading.textContent = "Location";
-  locationCardContainer.appendChild(locationHeading);
 
   const locationMapContainer = document.createElement("div");
   locationMapContainer.classList.add("location-map-container");
@@ -75,21 +59,23 @@ export default function addHomeContent() {
   const locationDesc = document.createElement("p");
   locationDesc.textContent = "Tour Eiffel, 15 Avenue Anatole France, Paris";
   locationMapContainer.appendChild(locationDesc);
-  locationCardContainer.appendChild(locationMapContainer);
-  descContainer.appendChild(locationCardContainer);
 
   const menuFooterContainer = document.createElement("div");
   menuFooterContainer.classList.add("menu-footer-container");
 
   const restaurantImg = new Image();
   restaurantImg.src = otherIcon;
-  menuFooterContainer.appendChild(restaurantImg);
-  contentBg.appendChild(menuFooterContainer);
 
   const menuFooterLink = document.createElement("a");
   menuFooterLink.textContent = "CHECK THE MENU!";
   menuFooterLink.classList.add("menu-footer-link");
-  menuFooterContainer.appendChild(menuFooterLink);
+
+  sloganContainer.append(descBg, slogan, leftDivRotation);
+  hoursCardContainer.append(hoursHeading, document.createElement("hr"), hoursTableContainer);
+  locationCardContainer.append(locationHeading, locationMapContainer);
+  descContainer.append(h2, descP, availableHoursAd, hoursCardContainer, locationAd, locationCardContainer);
+  menuFooterContainer.append(restaurantImg, menuFooterLink);
+  contentBg.append(sloganContainer, descContainer, menuFooterContainer);
 
   menuFooterLink.addEventListener("click", () => {
     homeContent.setAttribute("data-index", "2");
