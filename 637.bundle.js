@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrestaurant_page_package=self.webpackChunkrestaurant_page_package||[]).push([[637,631],{637:(e,t,a)=>{function c(){const e=document.querySelector("#content"),t=document.createElement("div");t.classList.add("contact-content-bg"),e.appendChild(t)}a.r(t),a.d(t,{default:()=>c})}}]);
